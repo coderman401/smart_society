@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "286586753314",
+    "project_id": "slotifyapp",
+    "storage_bucket": "slotifyapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286586753314:android:6c50636c7898839520957b",
+        "android_client_info": {
+          "package_name": "in.kishanpanchal.buildersgroup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286586753314-skcjeppcfgp1habvu458mpih92gssbmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCybk8jpVtWBU3EkK41Rql66HpQSVWYmc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286586753314-skcjeppcfgp1habvu458mpih92gssbmh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "286586753314-378rb4jd945tfvfllh2lr0i6qeu7re53.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "in.kishanpanchal.slotifyVendorApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286586753314:android:bc6c6640d74b9bbd20957b",
+        "android_client_info": {
+          "package_name": "in.kishanpanchal.slotifyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286586753314-skcjeppcfgp1habvu458mpih92gssbmh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCybk8jpVtWBU3EkK41Rql66HpQSVWYmc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286586753314-skcjeppcfgp1habvu458mpih92gssbmh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "286586753314-378rb4jd945tfvfllh2lr0i6qeu7re53.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "in.kishanpanchal.slotifyVendorApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
