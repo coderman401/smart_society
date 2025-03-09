@@ -6,4 +6,5 @@ class AppRouteName {
   static const String visitorNotification = '/visitorNotification';
   static const String notificationReponse = '/notificationReponse';
   static const String notificationPage = '/notification-page';
+  static const String forum = '/forum';
 }

@@ -33,9 +33,21 @@
   "for_delivery": "For {0} Delivery",
   "visitors": "Visitors",
   "members": "Members",
+  "forum": "Forum",
   "notice_board": "Notice Board",
   "amenities": "Amenities",
   "services": "Services",
   "parking": "Parking",
-  "events": "Events"
+  "events": "Events",
+  "sos": "SOS",
+  "balance_sheet": "Balance Sheets",
+  "like": "Like",
+  "likes": "Likes",
+  "liked": "Liked",
+  "comment": "Comment",
+  "comments": "Comments",
+  "share": "Share",
+  "post": "Post",
+  "posts": "Posts",
+  "follow": "Follow"
 }

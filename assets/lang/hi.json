@@ -33,9 +33,21 @@
   "for_delivery": "{0} वितरण के लिए",
   "visitors": "विजिटर",
   "members": "सदस्य",
+  "forum": "चर्चास्थान",
   "notice_board": "नोटिस बोर्ड",
   "amenities": "अमेनिटीज",
   "services": "सेवाएं",
   "parking": "पार्किंग",
-  "events": "इवेंट्स"
+  "events": "इवेंट्स",
+  "sos": "SOS",
+  "balance_sheet": "बैलेंस शीट",
+  "like": "लाइक करें",
+  "likes": "लाइक्स",
+  "liked": "लाइक किया",
+  "comment": "कमेंट करें",
+  "comments": "कमैंट्स",
+  "share": "शेयर करें",
+  "post": "पोस्ट करें",
+  "posts": "पोस्ट्स",
+  "follow": "फॉलो करें"
 }

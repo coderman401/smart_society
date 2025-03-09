@@ -1,5 +1,6 @@
 import 'package:builders_group/src/app/app_scaffold.dart';
 import 'package:builders_group/src/app/features/login/login_view.dart';
+import 'package:builders_group/src/app/features/forum/forum_view.dart';
 import 'package:builders_group/src/app/features/notifications/notification_response_view.dart';
 import 'package:builders_group/src/app/features/notifications/visitor_notification_view.dart';
 import 'package:builders_group/src/shared/models/page_arguments.dart';
@@ -45,6 +46,21 @@ class AppRoute {
         return PageRouteBuilder(
           settings: settings,
           pageBuilder: (_, __, ___) => const AppScaffold(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+      case AppRouteName.forum:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const ForumView(),
           transitionDuration: const Duration(milliseconds: 300),
           transitionsBuilder: (_, animation, __, child) {
             return SlideTransition(

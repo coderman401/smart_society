@@ -1,3 +1,4 @@
+import "package:builders_group/src/app/routes/app_route_name.dart";
 import "package:builders_group/src/l10n/app_localizations.dart";
 import "package:builders_group/src/shared/widgets/app_carousel.dart";
 import "package:flutter/material.dart";
@@ -11,13 +12,16 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   List data = [
-    {"title": "visitors", "icon": Icons.person_4_outlined},
-    {"title": "members", "icon": Icons.group_outlined},
-    {"title": "notice_board", "icon": Icons.library_books_outlined},
-    {"title": "amenities", "icon": Icons.sports_outlined},
-    {"title": "services", "icon": Icons.cleaning_services_outlined},
-    {"title": "parking", "icon": Icons.local_parking_outlined},
-    {"title": "events", "icon": Icons.event_note_outlined},
+    {"title": "visitors", "icon": Icons.person_4_outlined, "route": null},
+    {"title": "members", "icon": Icons.group_outlined, "route": null},
+    {"title": "notice_board", "icon": Icons.library_books_outlined, "route": null},
+    {"title": "forum", "icon": Icons.forum_outlined , "route": AppRouteName.forum},
+    {"title": "amenities", "icon": Icons.sports_outlined, "route": null},
+    {"title": "services", "icon": Icons.cleaning_services_outlined, "route": null},
+    {"title": "parking", "icon": Icons.local_parking_outlined, "route": null},
+    {"title": "events", "icon": Icons.event_note_outlined, "route": null},
+    {"title": "balance_sheet", "icon": Icons.description_outlined, "route": null},
+    {"title": "sos", "icon": Icons.sos_outlined, "route": null},
   ];
 
   @override
@@ -31,8 +35,8 @@ class _DashboardState extends State<Dashboard> {
         data
             .map(
               (f) => {
+                ...f,
                 "title": AppLocalizations.of(context).translate(f["title"]),
-                "icon": f["icon"],
               },
             )
             .toList();
@@ -76,7 +80,7 @@ class _DashboardState extends State<Dashboard> {
                 return FeatureCard(
                   icon: features[index]["icon"],
                   title: features[index]["title"],
-                  route: null,
+                  route: features[index]["route"],
                 );
               },
             ),
@@ -114,7 +118,7 @@ class _DashboardState extends State<Dashboard> {
 class FeatureCard extends StatelessWidget {
   final IconData icon;
   final String title;
-  final Widget? route;
+  final String? route;
 
   const FeatureCard({
     super.key,
@@ -126,19 +130,33 @@ class FeatureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
-      child: Card(
-        elevation: 8,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8,
-          children: [
-            Icon(icon, size: 48, color: Colors.blue),
-            Text(
-              title,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      height: 100,
+      child: GestureDetector(
+        onTap: () {
+          if (route!= null) {
+            Navigator.of(context).pushNamed(route!);
+          }
+        },
+        child: Card(
+          elevation: 4,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              spacing: 8,
+              children: [
+                Icon(icon, size: 48, color: Colors.blue),
+                Text(
+                title,
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
+                            ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

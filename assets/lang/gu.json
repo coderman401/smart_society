@@ -33,9 +33,21 @@
   "for_delivery": "{0} વિતરણ કરવા માટે",
   "visitors": "વિજિટર્સ",
   "members": "સદસ્યો",
+  "forum": "ચર્ચાસ્થાન",
   "notice_board": "નોટિસ બોર્ડ",
   "amenities": "અમેનિટીજ",
   "services": "સેવાઓ",
   "parking": "પાર્કિંગ",
-  "events": "ઇવેંટ્સ"
+  "events": "ઇવેંટ્સ",
+  "sos": "SOS",
+  "balance_sheet": "બેલન્સ શીટ",
+  "like": "લાઇક કરો",
+  "likes": "લાઇક્સ",
+  "liked": "લાઇક કર્યું",
+  "comment": "કમેંટ કરો",
+  "comments": "કમેંટ્સ",
+  "share": "શેર કરો",
+  "post": "પોસ્ટ કરો",
+  "posts": "પોસ્ટ્સ",
+  "follow": "ફોલો કરો"
 }
