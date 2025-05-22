@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:builders_group/src/app/features/forum/forum_presenter.dart';
 import 'package:builders_group/src/app/features/forum/forum_item.dart';
+import 'package:builders_group/src/app/routes/app_route_name.dart';
 import 'package:builders_group/src/l10n/app_localizations.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,9 @@ class ForumView extends StatefulWidget {
 }
 
 class _ForumViewState extends State<ForumView> implements ForumContract {
-  List<ForumItem> _forums = [];
+  final List<ForumItem> _forums = [];
   List<ForumItem> _filteredForums = [];
-  Random _random = Random();
+  final Random _random = Random();
   List<String> alphabet = [
     'A',
     'B',
@@ -492,7 +493,9 @@ class _ForumViewState extends State<ForumView> implements ForumContract {
       children: [
         Expanded(child: _searchBar()),
         OutlinedButton.icon(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, AppRouteName.addEditForum);
+          },
           icon: Icon(Icons.add_comment_outlined),
           label: Text(AppLocalizations.of(context).translate('post')),
         ),

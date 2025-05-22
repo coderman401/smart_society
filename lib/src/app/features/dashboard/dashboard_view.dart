@@ -13,11 +13,12 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   List data = [
     {"title": "visitors", "icon": Icons.person_4_outlined, "route": null},
-    {"title": "members", "icon": Icons.group_outlined, "route": null},
-    {"title": "notice_board", "icon": Icons.library_books_outlined, "route": null},
+    {"title": "members", "icon": Icons.group_outlined, "route": AppRouteName.members},
+    {"title": "notice_board", "icon": Icons.library_books_outlined, "route": AppRouteName.noticeBoard},
     {"title": "forum", "icon": Icons.forum_outlined , "route": AppRouteName.forum},
-    {"title": "amenities", "icon": Icons.sports_outlined, "route": null},
-    {"title": "services", "icon": Icons.cleaning_services_outlined, "route": null},
+    {"title": "amenities", "icon": Icons.sports_outlined, "route": AppRouteName.amenities},
+    {"title": "services", "icon": Icons.cleaning_services_outlined, "route": AppRouteName.services},
+    {"title": "complaints", "icon": Icons.info_outline_rounded, "route": AppRouteName.complaints},
     {"title": "parking", "icon": Icons.local_parking_outlined, "route": null},
     {"title": "events", "icon": Icons.event_note_outlined, "route": null},
     {"title": "balance_sheet", "icon": Icons.description_outlined, "route": null},

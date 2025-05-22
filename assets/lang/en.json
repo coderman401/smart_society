@@ -37,6 +37,7 @@
   "notice_board": "Notice Board",
   "amenities": "Amenities",
   "services": "Services",
+  "complaints": "Complaints",
   "parking": "Parking",
   "events": "Events",
   "sos": "SOS",
@@ -49,5 +50,7 @@
   "share": "Share",
   "post": "Post",
   "posts": "Posts",
-  "follow": "Follow"
+  "follow": "Follow",
+  "view_more": "View More",
+  "book_now": "Book Now"
 }

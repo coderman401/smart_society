@@ -37,6 +37,7 @@
   "notice_board": "નોટિસ બોર્ડ",
   "amenities": "અમેનિટીજ",
   "services": "સેવાઓ",
+  "complaints": "ફરિયાદો",
   "parking": "પાર્કિંગ",
   "events": "ઇવેંટ્સ",
   "sos": "SOS",
@@ -49,5 +50,7 @@
   "share": "શેર કરો",
   "post": "પોસ્ટ કરો",
   "posts": "પોસ્ટ્સ",
-  "follow": "ફોલો કરો"
+  "follow": "ફોલો કરો",
+  "view_more": "વધુ જુઓ",
+  "book_now": "હમણાં જ બુક કરો"
 }

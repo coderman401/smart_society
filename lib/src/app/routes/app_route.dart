@@ -1,8 +1,18 @@
+import 'dart:developer';
+
 import 'package:builders_group/src/app/app_scaffold.dart';
+import 'package:builders_group/src/app/features/amenities/amenities_view.dart';
+import 'package:builders_group/src/app/features/complaints/add_edit_complaits.dart';
+import 'package:builders_group/src/app/features/complaints/complaints_view.dart';
+import 'package:builders_group/src/app/features/forum/add_edit_forum.dart';
 import 'package:builders_group/src/app/features/login/login_view.dart';
 import 'package:builders_group/src/app/features/forum/forum_view.dart';
+import 'package:builders_group/src/app/features/members/members_view.dart';
+import 'package:builders_group/src/app/features/members/resident_list.dart';
+import 'package:builders_group/src/app/features/notice_board/notice_board_view.dart';
 import 'package:builders_group/src/app/features/notifications/notification_response_view.dart';
 import 'package:builders_group/src/app/features/notifications/visitor_notification_view.dart';
+import 'package:builders_group/src/app/features/services/services_view.dart';
 import 'package:builders_group/src/shared/models/page_arguments.dart';
 import 'package:builders_group/src/shared/widgets/language_selection_page.dart';
 import 'package:flutter/material.dart';
@@ -57,10 +67,140 @@ class AppRoute {
             );
           },
         );
+
       case AppRouteName.forum:
         return PageRouteBuilder(
           settings: settings,
           pageBuilder: (_, __, ___) => const ForumView(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+
+      case AppRouteName.addEditForum:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const AddEditForum(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+
+
+      case AppRouteName.noticeBoard:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const NoticeBoardView(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+
+      case AppRouteName.members:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const MembersView(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+      case AppRouteName.residents:
+        String block = (settings.arguments as PageArguments).data!['block'];
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => ResidentList(block: block),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+
+      case AppRouteName.amenities:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const AmenitiesView(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+
+      case AppRouteName.services:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const ServicesView(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+
+      case AppRouteName.complaints:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const ComplaintsView(),
+          transitionDuration: const Duration(milliseconds: 300),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+
+      case AppRouteName.addComplaint:
+        return PageRouteBuilder(
+          settings: settings,
+          pageBuilder: (_, __, ___) => const AddEditComplaint(),
           transitionDuration: const Duration(milliseconds: 300),
           transitionsBuilder: (_, animation, __, child) {
             return SlideTransition(
@@ -88,6 +228,7 @@ class AppRoute {
             );
           },
         );
+
       case AppRouteName.notificationReponse:
         PageArguments args = settings.arguments as PageArguments;
         bool isapproved = args.data!['isapproved'];
